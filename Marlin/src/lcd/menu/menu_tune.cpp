@@ -244,7 +244,7 @@ void menu_tune() {
   // Babystep Y:
   // Babystep Z:
   //
-  #if ENABLED(BABYSTEPPING)
+  #if ENABLED(BABYSTEPPING) && DISABLED(SLIM_LCD_MENUS)
     #if ENABLED(BABYSTEP_XY)
       SUBMENU(MSG_BABYSTEP_X, []{ _lcd_babystep_go(_lcd_babystep_x); });
       SUBMENU(MSG_BABYSTEP_Y, []{ _lcd_babystep_go(_lcd_babystep_y); });
